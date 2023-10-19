@@ -1,14 +1,28 @@
-// async function getRandomQuestion() {
-//     let random = Math.floor(Math.random() * 10)
-//     let response = await fetch(`https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple/${random}`)
-//     let pregunta = await response.json()
-//     for (let index = 0; index < pregunta.results.length; index++) {
-//         let preguntaRandom = pregunta.results[index].question
-//         console.log(preguntaRandom);
-//     }
-//     return preguntaRandom
+// async function getRandomPokemonImage() {
+//     let random = Math.floor(Math.random() * 151)
+//     let response = await fetch(`https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple`)
+//     let pokemon = await response.json()
+//     let img = pokemon.sprites.front_default
+//     return img
 // }
-let random = Math.floor(Math.random() * 10)
-fetch(`https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple/${random}`)
-.then(response=>console.log(response.json()));
 
+async function getQuestions() {
+    try {
+      const response = await fetch("https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple");
+      
+      if (!response.ok) {
+        throw new Error("Error al obtener los datos. Código de estado: " + response.status);
+      }
+      
+      const data = await response.json();
+      const questions = data.results;
+      
+      questions.forEach(question => {
+        console.log(question.question);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  getQuestions();
