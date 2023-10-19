@@ -1,3 +1,13 @@
+//PASOS A HACER:
+//Conseguir las preguntas de dentro del objeto
+//Pintar dentro de cada label, las pregunas traídas de forma random
+//Conseguir las respuestas, tanto incorrectas, como la respuesta correcta
+//Pintar las respuestas en los input
+
+
+
+
+//PRUEBAS PARA IMPRIMIR QUESTIONS:
 // async function getRandomPokemonImage() {
 //     let random = Math.floor(Math.random() * 151)
 //     let response = await fetch(`https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple`)
@@ -26,3 +36,5 @@ async function getQuestions() {
   }
   
   getQuestions();
+
+  document.getElementById("pregunta1").
