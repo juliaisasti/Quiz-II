@@ -16,25 +16,69 @@
 //     return img
 // }
 
-async function getQuestions() {
+async function getQuestionAndAnswers() {
+    let arrayPreguntas = [];
+    let arrayRespuestasIncorrectas = [];
+    let arrayRespuestasCorrectas = [];
     try {
       const response = await fetch("https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple");
-      
+  
       if (!response.ok) {
         throw new Error("Error al obtener los datos. Código de estado: " + response.status);
       }
-      
+  
       const data = await response.json();
       const questions = data.results;
-      
-      questions.forEach(question => {
-        console.log(question.question);
-      });
+  
+      for (let i = 0; i < questions.length; i++) {
+        arrayPreguntas.push(questions[i].question);
+        console.log(arrayPreguntas);
+
+        arrayRespuestasIncorrectas.push(questions[i].incorrect_answers);
+        console.log(arrayRespuestasIncorrectas);
+
+        arrayRespuestasCorrectas.push(questions[i].correct_answer);
+        console.log(arrayRespuestasCorrectas);
+      }
     } catch (error) {
       console.error(error);
     }
+    let i =0;
+    let template = `<legend id="pregunta">${arrayPreguntas[i]}</legend>
+    <label for="respuesta1">
+    <input type="radio" id="respuesta1" name="opcionesRespuesta">
+    ${arrayRespuestasCorrectas[i]}
+    </label>
+    <label for="respuesta2">
+    <input type="radio" id="respuesta2" name="opcionesRespuesta">
+    ${arrayRespuestasIncorrectas[i][0]}
+    </label>
+    <label for="respuesta3">
+    <input type="radio" id="respuesta3" name="opcionesRespuesta">
+    ${arrayRespuestasIncorrectas[i][1]}
+    </label>
+    <label for="respuesta4">
+    <input type="radio" id="respuesta4" name="opcionesRespuesta">
+    ${arrayRespuestasIncorrectas[i][2]}
+    </label>`
+    document.getElementById("seccionPregunta").innerHTML += template
   }
   
-  getQuestions();
+  getQuestionAndAnswers();
+ 
+  
+  
+  
+  
+  
+  
 
-  document.getElementById("pregunta1").
+
+
+
+
+
+
+
+
+  
