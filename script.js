@@ -59,7 +59,7 @@ async function getQuestionAndAnswers() {
     </label>
     <label for="respuesta4">
     <input type="radio" id="respuesta4" name="opcionesRespuesta">
-    ${arrayRespuestasIncorrectas[i][2]}
+    ${arrayRespuestasIncorrectas[i][2]}git push
     </label>`
     document.getElementById("seccionPregunta").innerHTML += template
   }
