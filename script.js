@@ -64,7 +64,7 @@ async function getQuestionAndAnswers() {
     document.getElementById("seccionPregunta").innerHTML += template
   }
   
-  getQuestionAndAnswers();
+  
  
   
   
