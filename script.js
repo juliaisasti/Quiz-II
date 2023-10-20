@@ -37,4 +37,4 @@ async function getQuestions() {
   
   getQuestions();
 
-  document.getElementById("pregunta1").
+  document.getElementById("pregunta1")
