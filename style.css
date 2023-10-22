@@ -50,3 +50,48 @@ p{
     scale: 1.05;
 }
 
+/* Estilos página QUESTIONS */
+fieldset{
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    border: 8px solid #A46FAE;
+}
+@font-face {
+    font-family: "musicApartments" ;
+    src: url(./assets/fonts/Music\ for\ empty\ apartments.ttf);
+}
+legend{
+    font-size: 26px;
+    text-align: center;
+    padding-top: 44px;
+    border: 5.5px solid #d786c6;
+    padding: 12px;
+    font-family: "musicApartments";
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+label{
+    background-color: #D1FFAD;
+    padding: 17px;
+    margin: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    font-family: "musicApartments";
+}
+label:hover{
+    background-color: #cd9cd6;
+    scale: 1.05;
+}
+input{
+    visibility: hidden;
+}
+#siguientePregunta{
+    padding: 0px 40px 18px 5px;
+    background-image: url(./assets/right-297788_1280.png);
+}
