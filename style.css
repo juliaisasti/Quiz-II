@@ -1,6 +1,52 @@
+/* Estilos de página HOME */
+body{
+    background-color: #FFF689;
+}
+@font-face {
+    font-family: "musicNet" ;
+    src: url(./assets/fonts/MUSICNET.ttf);
+}
 h1{
     text-align: center;
     background-color: #7AE7C7;
     padding: 32px;
-    border: 8px solid #94AFB3;
+    font-family: "musicNet";
+    margin-top: 1px;
 }
+h2{
+    text-align: center;
+    font-size: 23px;
+    padding: 19px;
+    font-family: "musicNet";
+}
+img{
+    display: flex;
+    margin: 0 auto;
+}
+@font-face {
+    font-family: "musicMagic" ;
+    src: url(./assets/fonts/Music\ Magic\ Personal\ Use.ttf);
+}
+p{
+    font-family: "musicMagic";
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin: 15px 15px 30px 15px;
+}
+#startQuiz{
+    display: flex;
+    background-color: #D1FFAD;
+    text-decoration: none;
+    justify-content: center;
+    font-size: x-large;
+    font-family: "musicNet";
+    padding: 12px;
+    border: 4px solid #94AFB3;
+    margin: -12px 68px 29px 68px;
+}
+#startQuiz:hover{
+    background-color: #a9e47c;
+    scale: 1.05;
+}
+

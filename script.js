@@ -16,10 +16,10 @@
 //     return img
 // }
 
-async function getQuestionAndAnswers() {
-    let arrayPreguntas = [];
+let arrayPreguntas = [];
     let arrayRespuestasIncorrectas = [];
     let arrayRespuestasCorrectas = [];
+async function getQuestionAndAnswers() {
     try {
       const response = await fetch("https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple");
   
@@ -45,6 +45,7 @@ async function getQuestionAndAnswers() {
     }
     let i =0;
     let template = `<legend id="pregunta">${arrayPreguntas[i]}</legend>
+    <section>
     <label for="respuesta1">
     <input type="radio" id="respuesta1" name="opcionesRespuesta">
     ${arrayRespuestasCorrectas[i]}
@@ -60,9 +61,11 @@ async function getQuestionAndAnswers() {
     <label for="respuesta4">
     <input type="radio" id="respuesta4" name="opcionesRespuesta">
     ${arrayRespuestasIncorrectas[i][2]}git push
-    </label>`
+    </label>
+    </section>`
     document.getElementById("seccionPregunta").innerHTML += template
   }
+  getQuestionAndAnswers();
   
   
  
