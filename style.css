@@ -8,7 +8,7 @@ body{
 }
 h1{
     text-align: center;
-    background-color: #7AE7C7;
+    background-color: #d786c6;
     padding: 32px;
     font-family: "musicNet";
     margin-top: 1px;
@@ -24,11 +24,11 @@ img{
     margin: 0 auto;
 }
 @font-face {
-    font-family: "musicMagic" ;
-    src: url(./assets/fonts/Music\ Magic\ Personal\ Use.ttf);
+    font-family: "gameTime" ;
+    src: url(./assets/fonts/Game_Time.ttf);
 }
 p{
-    font-family: "musicMagic";
+    font-family: "gameTime";
     text-align: center;
     font-size: 26px;
     letter-spacing: 1px;
@@ -46,8 +46,26 @@ p{
     margin: -12px 68px 29px 68px;
 }
 #startQuiz:hover{
-    background-color: #a9e47c;
+    background-color: #a0ffae;
     scale: 1.05;
+}
+footer{
+    background-color: #d786c6;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+@font-face {
+    font-family: "saudagar" ;
+    src: url(./assets/fonts/Saudagar.ttf);
+}
+.footer{
+    font-family: "saudagar";
+    font-size: large;
+    margin-bottom: 8px;
+    color: #e3ffe7;
 }
 
 /* Estilos página QUESTIONS */
@@ -67,7 +85,7 @@ legend{
     padding-top: 44px;
     border: 5.5px solid #d786c6;
     padding: 12px;
-    font-family: "musicApartments";
+    font-family: "gameTime";
 }
 section{
     display: flex;
@@ -82,7 +100,8 @@ label{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     text-align: center;
-    font-family: "musicApartments";
+    font-family: "gameTime";
+    font-size: larger;
 }
 label:hover{
     background-color: #cd9cd6;
@@ -94,4 +113,8 @@ input{
 #siguientePregunta{
     padding: 0px 40px 18px 5px;
     background-image: url(./assets/right-297788_1280.png);
+    display: flex;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 38px;
 }
