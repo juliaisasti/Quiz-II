@@ -1,8 +1,8 @@
-//declaración de variables
+//declaración de variables globales
 
 let arrayPreguntas = [];
-    let arrayRespuestasIncorrectas = [];
-    let arrayRespuestasCorrectas = [];
+let arrayRespuestasIncorrectas = [];
+let arrayRespuestasCorrectas = [];
 let respuestasUsuario = [];
 let templateArray = [];
 let counter = 0;
@@ -97,3 +97,43 @@ for (let i = 0; i < respuestasUsuario.length; i++) {
     let results = `Tu puntaje es de ${counter} sobre 10`
     document.getElementById("results").innerHTML = results;
 }
+
+// Función para obtener y mostrar los contactos desde Firestore
+async function getUsers() {
+  db.collection("formulario") // Reemplaza con tu nombre de colección
+    .get()
+    .then((querySnapshot) => {
+      const users = [];
+      querySnapshot.forEach((doc) => {
+        const userData = doc.data();
+        contacts.push(userData);
+      });
+      //Aquí se llama a la función para guardar la info de los users(con users como parámetro);
+    })
+    .catch((error) => {
+      console.error("Error al obtener los contactos:", error);
+    });
+}
+
+// Llamar a la función para obtener y mostrar los contactos al cargar la página
+getUsers();
+
+async function pintarGrafica() {
+  fetch('firestore')
+      .then(res => res.json())
+      //seguir con lo que toque del objeto
+          const data = {
+              labels: nombresPeli,
+              series: [fechasPeli],
+          };
+          const options = {
+              high: Math.max(...fechasPeli),
+              low: Math.min(...fechasPeli),
+              axisY: {
+                  onlyInteger: true,
+              }
+          };
+          new Chartist.Line('#chart1', data, options);
+                  
+}
+pintarGrafica();
