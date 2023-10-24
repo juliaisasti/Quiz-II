@@ -94,7 +94,7 @@ for (let i = 0; i < respuestasUsuario.length; i++) {
     counter++
   } 
     }
-    let results = `Tu puntaje es de ${counter} sobre 10`
+    let results = `${counter}`+ `/10`
     document.getElementById("results").innerHTML = results;
 }
 

@@ -154,6 +154,21 @@ input{
 #botones{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 130px;
+}
+#results{
+    background-image: url(./assets/dinos.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 345px;
+    background-repeat: no-repeat;
+    font-family: "musicNet";
+    font-size: 67px;
+    color: #888d85;
+    display: flex;
+    justify-content: center;
+    padding: 65px 85px 65px 85px;
+    margin: 0 auto;
 }
 .botonResults{
     text-decoration: none;
