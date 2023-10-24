@@ -116,24 +116,31 @@ async function getUsers() {
 }
 
 // Llamar a la función para obtener y mostrar los contactos al cargar la página
-getUsers();
+// getUsers();
 
 async function pintarGrafica() {
-  fetch('firestore')
-      .then(res => res.json())
-      //seguir con lo que toque del objeto
-          const data = {
-              labels: nombresPeli,
-              series: [fechasPeli],
-          };
-          const options = {
-              high: Math.max(...fechasPeli),
-              low: Math.min(...fechasPeli),
-              axisY: {
-                  onlyInteger: true,
-              }
-          };
-          new Chartist.Line('#chart1', data, options);
+  // cambiar por URL de firebase cuando esté listo.
+  const response = await fetch("../mocks/objetoPrueba.json");
+  const json = await response.json();
+  const users = json.users;
+  console.log('users: ', users);
+  let userIds = [];
+  let userScores = [];
+  users.forEach(user =>
+  {
+    userIds.push(user.id);
+    userScores.push(user.puntuacion);
+  });
+  const chartData = {
+    labels: userIds,
+    series: [userScores],
+  };
+  const options = {
+      axisY: {
+          onlyInteger: true,
+      }
+  };
+  new Chartist.Bar('#chart1', chartData, options);
                   
 }
 pintarGrafica();
