@@ -1,6 +1,6 @@
 <div align="center">
 
-# Tim Burton Movies Quiz
+# Random Music Quiz
 
   <img src="./assets/record-8329_256.gif" alt="music record" width=200><br>
   
