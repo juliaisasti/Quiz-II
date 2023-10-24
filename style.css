@@ -1,6 +1,16 @@
 /* Estilos de página HOME */
 body{
     background-color: #FFF689;
+    margin: 0;
+    display: flex;
+    flex-direction: column;       
+}
+header{
+    min-height: 10vh;
+    margin: 0 13px;
+}
+main{
+    min-height: 80vh;
 }
 @font-face {
     font-family: "musicNet" ;
@@ -11,7 +21,6 @@ h1{
     background-color: #d786c6;
     padding: 32px;
     font-family: "musicNet";
-    margin-top: 1px;
 }
 h2{
     text-align: center;
@@ -51,11 +60,15 @@ p{
 }
 footer{
     background-color: #d786c6;
-    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-
+    width: 100vw;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    margin-top: 5px;
+    min-height: 10vh;
 }
 @font-face {
     font-family: "saudagar" ;
@@ -64,15 +77,15 @@ footer{
 .footer{
     font-family: "saudagar";
     font-size: large;
-    margin-bottom: 8px;
+    margin: 0 5px;
     color: #e3ffe7;
+    margin-top: revert;
 }
 
 /* Estilos página QUESTIONS */
 fieldset{
     height: 90%;
-    width: 90%;
-    margin: 0 auto;
+    margin: 0px 13px;
     border: 8px solid #A46FAE;
     margin-bottom: 15px;
     display: flex;
@@ -131,7 +144,7 @@ input{
 #siguientePregunta:hover{
     scale: 1.05;
 }
-/*Estilos Results */
+/*Estilos RESULTS */
 #botones{
     display: flex;
     justify-content: space-evenly;
@@ -152,3 +165,4 @@ input{
     background-color: #a0ffae;
     scale: 1.05;
 }
+
