@@ -43,6 +43,12 @@ p{
     letter-spacing: 1px;
     margin: 15px 15px 30px 15px;
 }
+.ct-golden-section {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
 #startQuiz{
     display: flex;
     background-color: #D1FFAD;
