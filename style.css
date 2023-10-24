@@ -131,3 +131,24 @@ input{
 #siguientePregunta:hover{
     scale: 1.05;
 }
+/*Estilos Results */
+#botones{
+    display: flex;
+    justify-content: space-evenly;
+}
+.botonResults{
+    text-decoration: none;
+    font-family: "musicNet";
+    background-color: #D1FFAD;
+    padding: 19px;
+    border: 3px solid #94AFB3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 20%;
+}
+.botonResults:hover{
+    background-color: #a0ffae;
+    scale: 1.05;
+}
