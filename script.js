@@ -1,8 +1,8 @@
 //declaración de variables
 
 let arrayPreguntas = [];
-let arrayRespuestasIncorrectas = [];
-let arrayRespuestasCorrectas = [];
+    let arrayRespuestasIncorrectas = [];
+    let arrayRespuestasCorrectas = [];
 let respuestasUsuario = [];
 let templateArray = [];
 let counter = 0;
@@ -10,33 +10,33 @@ let questionNumber = 0;
 
 //fetch de la api + llamada a la función para pintar las preguntas y opciones
 async function getQuestionAndAnswers() {
-  try {
-    const response = await fetch(
+    try {
+      const response = await fetch(
       "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple"
     );
-
-    if (!response.ok) {
-      throw new Error(
+  
+      if (!response.ok) {
+        throw new Error(
         "Error al obtener los datos. Código de estado: " + response.status
       );
-    }
-
-    const data = await response.json();
-    const questions = data.results;
-
-    for (let i = 0; i < questions.length; i++) {
-      arrayPreguntas.push(questions[i].question);
-
-      arrayRespuestasIncorrectas.push(questions[i].incorrect_answers);
-
-      arrayRespuestasCorrectas.push(questions[i].correct_answer);
-    }
+      }
+  
+      const data = await response.json();
+      const questions = data.results;
+  
+      for (let i = 0; i < questions.length; i++) {
+        arrayPreguntas.push(questions[i].question);
+        
+        arrayRespuestasIncorrectas.push(questions[i].incorrect_answers);
+        
+        arrayRespuestasCorrectas.push(questions[i].correct_answer);
+              }
 
     pintarPreguntas(0);
-  } catch (error) {
-    console.error(error);
-  }
-}
+    } catch (error) {
+      console.error(error);
+    }
+    }
 
 //template string para pintar las preguntas y opciones en required + innerHTML
 async function pintarPreguntas(i) {
@@ -60,12 +60,12 @@ async function pintarPreguntas(i) {
     
     <button type='submit' id="siguientePregunta"></button>`;
   document.getElementById("seccionPregunta").innerHTML = template;
-}
+  }
 
 //función que se hace sólo se hace si se está en la página questions para setear en local storage, pasar las preguntas y pasar a la página de resultados
 
 if (window.location.pathname == "/pages/questions.html") {
-  getQuestionAndAnswers();
+  getQuestionAndAnswers();  
 
   document
     .getElementById("formulario")

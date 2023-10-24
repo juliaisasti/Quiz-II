@@ -74,6 +74,10 @@ fieldset{
     width: 90%;
     margin: 0 auto;
     border: 8px solid #A46FAE;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 @font-face {
     font-family: "musicApartments" ;
@@ -96,25 +100,55 @@ label{
     background-color: #D1FFAD;
     padding: 17px;
     margin: 26px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
     text-align: center;
     font-family: "gameTime";
     font-size: larger;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 label:hover{
     background-color: #cd9cd6;
     scale: 1.05;
 }
+label:checked{
+    background-color: #cd9cd6;
+}
 input{
     visibility: hidden;
 }
 #siguientePregunta{
-    padding: 0px 40px 18px 5px;
+    padding: 3px 59px 33px 9px;
     background-image: url(./assets/right-297788_1280.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px;
     display: flex;
     margin: 0 auto;
     margin-top: 13px;
     margin-bottom: 38px;
+}
+#siguientePregunta:hover{
+    scale: 1.05;
+}
+/*Estilos Results */
+#botones{
+    display: flex;
+    justify-content: space-evenly;
+}
+.botonResults{
+    text-decoration: none;
+    font-family: "musicNet";
+    background-color: #D1FFAD;
+    padding: 19px;
+    border: 3px solid #94AFB3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 20%;
+}
+.botonResults:hover{
+    background-color: #a0ffae;
+    scale: 1.05;
 }
