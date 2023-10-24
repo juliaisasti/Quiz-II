@@ -38,24 +38,24 @@ async function getQuestionAndAnswers() {
   }
 }
 
-//template string para pintar las preguntas y opciones + innerHTML
+//template string para pintar las preguntas y opciones en required + innerHTML
 async function pintarPreguntas(i) {
   let template = `
   <legend id="pregunta">${arrayPreguntas[i]}</legend>
     
-    <input type="radio" class="answer" id="respuesta1" name="opcionesRespuesta" value='${arrayRespuestasCorrectas[i]}'>
+    <input type="radio" class="answer" id="respuesta1" name="opcionesRespuesta" value='${arrayRespuestasCorrectas[i]}' required>
     <label for="respuesta1">${arrayRespuestasCorrectas[i]}</label>
   
     
-    <input type="radio" class="answer" id="respuesta2" name="opcionesRespuesta" value='${arrayRespuestasIncorrectas[i][0]}'>
+    <input type="radio" class="answer" id="respuesta2" name="opcionesRespuesta" value='${arrayRespuestasIncorrectas[i][0]}' required>
     <label for="respuesta2">${arrayRespuestasIncorrectas[i][0]}</label>
     
     
-    <input type="radio" class="answer" id="respuesta3" name="opcionesRespuesta" value='${arrayRespuestasIncorrectas[i][1]}'>
+    <input type="radio" class="answer" id="respuesta3" name="opcionesRespuesta" value='${arrayRespuestasIncorrectas[i][1]}' required>
     <label for="respuesta3">${arrayRespuestasIncorrectas[i][1]}</label>
     
     
-    <input type="radio" class="answer" id="respuesta4" name="opcionesRespuesta" value='${arrayRespuestasIncorrectas[i][2]}'>
+    <input type="radio" class="answer" id="respuesta4" name="opcionesRespuesta" value='${arrayRespuestasIncorrectas[i][2]}' required>
     <label for="respuesta4">${arrayRespuestasIncorrectas[i][2]}</label>
     
     <button type='submit' id="siguientePregunta"></button>`;
@@ -93,6 +93,7 @@ for (let i = 0; i < respuestasUsuario.length; i++) {
   if (respuestasUsuario[i] == arrayRespuestasCorrectas[i]) {
     counter++
   } 
-}
-console.log(`Tu puntaje es de ${counter} sobre 10`)
+    }
+    let results = `Tu puntaje es de ${counter} sobre 10`
+    document.getElementById("results").innerHTML = results;
 }
