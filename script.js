@@ -41,7 +41,7 @@ const loginForm = document.getElementById("login-form");
 const logout = document.getElementById("logout");
 
 //SignUp function
-if (window.location.pathname == "/pages/home.html") {
+if (window.location.pathname.includes("/pages/home.html")) {
   signUpForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const signUpEmail = document.getElementById("signup-email").value;
@@ -152,7 +152,7 @@ async function pintarPreguntas(i) {
 
 //función que se hace sólo se hace si se está en la página questions para setear en local storage, pasar las preguntas y pasar a la página de resultados
 
-if (window.location.pathname == "/pages/questions.html") {
+if (window.location.pathname.includes("/pages/questions.html")) {
   getQuestionAndAnswers();
 
   document
@@ -179,7 +179,7 @@ if (window.location.pathname == "/pages/questions.html") {
 
 //función que sólo se hace si se está en la página de results, recuperar datos de local storage para compararlos, sumar al counter e imprimir por consola el resultado
 
-if (window.location.pathname == "/pages/results.html") {
+if (window.location.pathname.includes("/pages/results.html")) {
   let respuestasUsuario = JSON.parse(localStorage.getItem("respuestasUsuario"));
   let arrayRespuestasCorrectas = JSON.parse(
     localStorage.getItem("arrayRespuestasCorrectas")
