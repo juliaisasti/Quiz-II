@@ -1,13 +1,13 @@
 <div align="center">
 
-# Random Music Quiz
+# Welcome to our Random Music Quiz!
 
   <img src="./assets/record-8329_256.gif" alt="music record" width=200><br>
   
 
 Welcome to our Random Music Quiz! Test your knowledge with the amazing questions about modern music history.
 
-[Click to visit my page](https://diananospace4bugs.github.io/quiz-project-form.github.io/)
+[Click to visit uor quiz page](https://diananospace4bugs.github.io/quiz-project-form.github.io/)
 </div>
 
 
@@ -34,9 +34,17 @@ This project was created using the following technologies:
 
 ## Usage
 
-1. Click the "Start Quiz" button to begin the questionnaire.
-2. Once on the quiz page, select the correct answer for each of the questions by clicking on it.
-3. Press the "Submit" button to check the quiz result.
-4. If any of the questions has not been answered, you will receive an alert to remind you to answer all the questions in order to view the final quiz result.
+1. Upon entering the home page, you must log in with your email and password to start the game. If it's your first time taking our quiz, we ask that you register with your email, a username, and a password.
+1. Afterward, you will need to click the "start quiz" button to begin answering the 10 questions in our random music quiz, moving one question at a time using the arrow button. 
+1. You cannot proceed to the next question until the current one has a marked answer.
+Once you have answered the 10 questions, you will be redirected to the results page, where you can view your quiz score. Finally, you can decide whether you want to restart the quiz with a new set of 10 questions or return to the "home page."
+
+## Future outlook
+
+- Implement form validation for sign up and log in using RegEx.
+- Store user data and quiz scores in the Firebase database.
+- Render the results chart of previous users with data retrieved from the Firebase database.
+- Add a contribute.md document to establish general code writing rules that are common for all individuals who wish to contribute to the current project.
+
 
 

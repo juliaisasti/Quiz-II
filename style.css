@@ -43,11 +43,111 @@ p{
     letter-spacing: 1px;
     margin: 15px 15px 30px 15px;
 }
+div h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-family: "musicApartments";
+    margin-top: 30px;
+}
+#signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #A46FAE;
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#signup-form input{
+    margin-bottom: 14px;
+}
+.emailLabel{
+    background-color: transparent;
+    display: contents;
+    margin-bottom: 2px;
+}
+#userLabel{
+    background-color: transparent;
+    display: contents;
+}
+.passLabel{
+    background-color: transparent;
+    display: contents;
+}
+#registerBtn{
+    display: flex;
+    margin: 0 auto;
+    background-color: #D1FFAD;
+    text-decoration: none;
+    justify-content: center;
+    font-size: large;
+    font-family: "musicNet";
+    color: #000000;
+    padding: 6px;
+    border: 4px solid #94AFB3;
+}
+#registerBtn:hover{
+    background-color: #a0ffae;
+    scale: 1.05;
+}
+#loginBtn{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: #D1FFAD;
+    text-decoration: none;
+    justify-content: center;
+    font-size: large;
+    font-family: "musicNet";
+    color: #000000;
+    padding: 6px;
+    border: 4px solid #94AFB3;
+}
+#loginBtn:hover{
+    background-color: #a0ffae;
+    scale: 1.05;
+}
+.submitBtnLoginForm{
+    background-color: #D1FFAD;
+    padding: 7px 10px;
+    font-family: 'musicNet';
+    color: black;
+    font-size: larger;
+    border: 4px solid #94AFB3;
+}
+.submitBtnLoginForm:hover{
+    background-color: #a0ffae;
+    scale: 1.05;
+}
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #A46FAE;
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#login-form input{
+    margin-bottom: 14px;
+}
 .ct-golden-section {
     display: block;
     position: relative;
     width: 90%;
     margin: 0 auto;
+}
+.ct-chart-bar{
+    display: flex !important;
+}
+#titleGraphic{
+    margin-bottom: 1%;
+    margin-left: 8%;
+    margin-top: 8%;
+    font-family: "musicApartments";
 }
 #startQuiz{
     display: flex;
@@ -132,6 +232,9 @@ label:hover{
 }
 label:checked{
     background-color: #cd9cd6;
+}
+.answer{
+    display: none;
 }
 .hidden {
     display: none;
