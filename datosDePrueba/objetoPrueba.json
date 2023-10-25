@@ -1,0 +1,17 @@
+{
+    "users": [{
+        "id": "mariadiana1",
+        "email": "ejemplo@gmail",
+        "puntuacion": 5
+    },
+    {
+        "id": "juliatopuria2",
+        "email": "ejemplo3@gmail",
+        "puntuacion": 10
+    },
+    {
+        "id": "guillensioarsensio3",
+        "email": "ejemplo2@gmail",
+        "puntuacion": 3
+    }]
+}
