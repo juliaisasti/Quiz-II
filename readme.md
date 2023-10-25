@@ -7,7 +7,7 @@
 
 Welcome to our Random Music Quiz! Test your knowledge with the amazing questions about modern music history.
 
-[Click to visit uor quiz page]([http://www.randomusicquiz.com/](https://diananospace4bugs.github.io/Quiz-II/pages/home.html))
+[Click to visit uor quiz page](https://diananospace4bugs.github.io/Quiz-II/pages/home.html)
 </div>
 
 
