@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="../assets/nota-musical.png">
-</head>
-<body>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/nota-musical.png" />
+  </head>
+  <body>
     <header>
-        <h1>Random Quiz Generator</h1>
+      <h1>Random Quiz Generator</h1>
+      <h2>Welcome to the Challenge</h2>
+      <img src="../assets/record-8329_256.gif" alt="Gif record music" />
+      <p>
+        Welcome to our exciting random quiz! Challenge your knowledge with
+        surprising questions on a wide range of topics. Each visit will be a new
+        adventure. Have fun and discover how much you know!
+      </p>
     </header>
     <main>
-        <h2>Welcome to the Challenge</h2>
-        <img src="../assets/record-8329_256.gif" alt="Gif record music">
-        <p>Welcome to our exciting random quiz! Challenge your 
-            knowledge with surprising questions on a wide range of 
-            topics. Each visit will be a new adventure. Have fun 
-            and discover how much you know!</p>
-        <!-- Aquí va la gráfica de resultados 
-            pasados con su respectiva descripción -->
+      <!-- Aquí va la gráfica de resultados pasados con su respectiva descripción -->
 
-        <!-- Aquí después va el login -->
-        <a id="startQuiz" href="./questions.html">Start quiz</a>
+      <!-- Aquí después va el login -->
+      <button id="registerBtn">Register</button>
+      <button id="loginBtn">Login</button>
+      <div id="signup" class="hidden">
+        <h3>Registro</h3>
+        <form id="signup-form">
+          <div>
+            <label for="signup-email">Email: </label>
+            <input type="text" id="signup-email" name="signup-email" />
+          </div>
+          <div>
+            <label for="signup-user">User name: </label>
+            <input type="text" id="signup-user" name="signup-user" />
+          </div>
+          <div>
+            <label for="signup-pass">Password: </label>
+            <input type="password" id="signup-pass" name="signup-pass" />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div id="login" class="hidden">
+        <h3>Login</h3>
+        <form id="login-form">
+          <div>
+            <label for="login-email">Email: </label>
+            <input type="text" id="login-email" name="login-email" />
+          </div>
+          <div>
+            <label for="login-pass">Password: </label>
+            <input type="password" id="login-pass" name="login-pass" />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p id="msgerr"></p>
+      </div>
+      <div id="logout-container">
+        <button id="logout">Logout</button>
+      </div>
+      <div id="user-data"></div>
+      <a id="startQuiz" href="./questions.html">Start quiz</a>
     </main>
     <footer>
         <p class="footer">Maria Diana Noaghiul Barbulescu & Julia Isasti. All rights reserved.</p>
     </footer>
-    <script src="../script.js"></script>
-</body>
+    <script src="../script.js" type="module"></script>
+  </body>
 </html>

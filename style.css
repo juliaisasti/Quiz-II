@@ -127,9 +127,10 @@ label:hover{
 label:checked{
     background-color: #cd9cd6;
 }
-input{
-    visibility: hidden;
-}
+.hidden {
+    display: none;
+} 
+
 #siguientePregunta{
     padding: 3px 59px 33px 9px;
     background-image: url(./assets/right-297788_1280.png);
