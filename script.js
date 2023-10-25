@@ -1,3 +1,72 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+import { getFirestore, collection, doc, getDoc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-firestore.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCdqKfg-MUYr8XaqjnTILiclMRASGsgYTs",
+  authDomain: "quiz-ii-295bf.firebaseapp.com",
+  projectId: "quiz-ii-295bf",
+  storageBucket: "quiz-ii-295bf.appspot.com",
+  messagingSenderId: "624153277504",
+  appId: "1:624153277504:web:78e703c7beb304ba739ba5"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+//Initialize Auth
+const auth = getAuth();
+const user = auth.currentUser;
+//Initialize DDBB
+const db = getFirestore(app);
+
+//Selectores
+const signUpForm = document.getElementById('signup-form');
+const loginForm = document.getElementById('login-form');
+const logout = document.getElementById('logout');
+
+//SignUp function
+signUpForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const signUpEmail = document.getElementById('signup-email').value;
+  const signUpPassword = document.getElementById('signup-pass').value;
+  const signUpUser = document.getElementById('signup-user').value;
+  const usersRef = collection(db, "users");
+  let score = []
+
+  try {
+    //Create auth user
+    await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
+    .then((userCredential) => {
+      console.log('User registered')
+      const user = userCredential.user;
+      signUpForm.reset();
+    })
+    //Create document in DB
+    await setDoc(doc(usersRef, signUpEmail), {
+      username: signUpUser,
+      email: signUpEmail,
+      score})
+  } catch (error) {
+    console.log('Error: ', error)
+  }
+      
+})
+
+const registerBtn = document.querySelector("#registerBtn")
+const loginBtn = document.querySelector("#loginBtn")
+const signUpContainer = document.querySelector("#signup")
+const loginContainer = document.querySelector("#login")
+
+registerBtn.addEventListener('click', function(){
+  signUpContainer.classList.toggle("hidden");
+});
+
+loginBtn.addEventListener('click', function(){
+  loginContainer.classList.toggle("hidden");
+});
+
 //declaración de variables
 
 let arrayPreguntas = [];
@@ -94,6 +163,7 @@ for (let i = 0; i < respuestasUsuario.length; i++) {
     counter++
   } 
     }
+
     let results = `Tu puntaje es de ${counter} sobre 10`
     document.getElementById("results").innerHTML = results;
 }
